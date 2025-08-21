@@ -1,11 +1,11 @@
-import java.util.Scanner;
 
 public class ContaCorrente {
     private float saldo;
     private float chequeEspecial;
-
-    Scanner sc = new Scanner(System.in);
-
+    private float deposito;
+    private float saque;
+    private float transferencia;
+    
     public float getSaldo() {
         return saldo;
     }
@@ -22,78 +22,19 @@ public class ContaCorrente {
         this.chequeEspecial = chequeEspecial;
     }
 
-    /*
-     * public ContaCorrente(float saldo, float ChequeEspecial){
-     * this.saldo = saldo;
-     * this.chequeEspecial = chequeEspecial;
-     * }
-     * public float getSaldo(){
-     * return saldo;
-     * }
-     * public float getChequeEspecial(){
-     * return chequeEspecial;
-     * }
-     */
-
-    public void Menu() throws Exception {
-        System.out.println("\n============= MENU ==============");
-        System.out.println("=== Selecione uma opção =========");
-        System.out.println("=== 0 - Verificar Saldo   |======");
-        System.out.println("=== 1 - Realizar Depósito |======");
-        System.out.println("=== 2 - Realizar Saque    |======");
-        System.out.println("=== 3 - Encerrar          |======");
-        System.out.println("=================================");
-        int opcao = sc.nextInt();
-
-        boolean ligado = true;
-        while (ligado) {
-            switch (opcao) {
-                case 0:
-                    System.out.println("Mostrar Saldo");
-                    MostrarSaldo();
-                    Menu();
-                    break;
-                case 1:
-                    System.out.println("Realizar Depósito");
-                    Depositar();
-                    Menu();
-                    break;
-                case 2:
-                    System.out.println("Realizar Saque");
-                    Sacar();
-                    Menu();
-                    break;
-                case 3:
-                    System.out.println("Programa encerrado.");
-                    ligado = false;
-                    break;
-                default:
-                    System.out.println("Opção inválida!");
-                    Menu();
-                    break;
-            }
-        }
-    }
-
     public void Sacar() throws Exception {
-        System.out.println("Insira um valor para sacar: ");
-        float valor = sc.nextFloat();
-
-        if (valor <= 0) {
-            throw new Exception("\n--- Operação Cancelada! valor zerado ou negativo \n--- Saldo: R$" + valor);
-        } else if (valor > (saldo + chequeEspecial)) {
+        if (saque <= 0) {
+            throw new Exception("\n--- Operação Cancelada! valor zerado ou negativo \n--- Saldo: R$" + saque);
+        } else if (saque > (saldo + chequeEspecial)) {
             throw new Exception("\n--- Saldo Insuficiente! \n--- Saldo: R$" + (saldo + chequeEspecial));
         } else {
-            saldo -= valor;
-            System.out.println("\n--- Saque realizado com sucesso!\n ---Valor do saque: R$" + valor
+            saldo -= saque;
+            System.out.println("\n--- Saque realizado com sucesso!\n ---Valor do saque: R$" + saque
                     + "\n--- Saldo atual: R$" + saldo);
         }
     }
 
     public void Depositar() throws Exception {
-        System.out.println("Insira um valor para depositar: ");
-        float deposito = sc.nextFloat();
-
         if (deposito <= 0) {
             throw new Exception("\n--- Depósito não realizado! Valor nulo ou negativo");
         } else {
@@ -106,5 +47,31 @@ public class ContaCorrente {
     public void MostrarSaldo() {
         System.out.println("\n--- Saldo Atual: R$" + saldo);
     }
-    // CONSTRUIR UM MÉTODO PARA TRANSFERIR valores entrs contas
+    
+    public void Tranferir() throws Exception {
+        if(transferencia <= 0) {
+            throw new Exception("\n--- Transferência não realizada! Valor nulo ou negativo");
+        } else if (transferencia > (saldo + chequeEspecial)) {
+            throw new Exception("\n--- Saldo Insuficiente para transferência! \n--- Saldo: R$" + (saldo + chequeEspecial));
+        } else {
+            saldo -= transferencia;
+            System.out.println("\n--- Transferência realizada com sucesso! \n--- Valor transferido: R$" + transferencia
+                    + " \n--- Saldo atual: R$ " + saldo);
+        }
+    }
+    
+    public void transferir(ContaCorrente contaDestino, float valor) throws Exception {
+        if(valor <= 0) {
+            throw new Exception("\n--- Transferência não realizada! Valor nulo ou negativo.");
+        } else if (valor > (this.saldo + this.chequeEspecial)) {
+            throw new Exception("\n--- Saldo Insuficiente para transferência! \n--- Saldo disponível: R$" + (this.saldo + this.chequeEspecial));
+        } else {
+            this.saldo -= valor;
+            contaDestino.saldo += valor;
+            System.out.println("\n--- Transferência realizada com sucesso! ---");
+            System.out.println("--- Valor transferido: R$" + valor);
+            System.out.println("--- Saldo atual da sua conta: R$" + this.saldo);
+            System.out.println("--- Saldo atual da conta de destino: R$" + contaDestino.saldo);
+        }
+    }
 }
