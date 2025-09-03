@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace 'com.th.telas'
-    compileSdk 34
+    compileSdk 35
 
     defaultConfig {
         applicationId "com.th.telas"

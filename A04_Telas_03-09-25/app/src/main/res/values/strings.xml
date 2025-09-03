@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Telas</string>
+    <string name="textview">Você está na tela principal</string>
+    <string name="button">Ir para tela 2</string>
+    <string name="textview2">Você está na tela 2</string>
+    <string name="btTelaprincipal">Ir para tela principal</string>
 </resources>
