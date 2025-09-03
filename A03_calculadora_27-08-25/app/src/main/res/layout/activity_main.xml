@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -8,20 +8,27 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="47dp"
+        android:layout_marginEnd="205dp"
+        android:layout_marginBottom="818dp"
+        android:text="Digite o primeiro número:" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="418dp" />
+        android:layout_above="@+id/textView2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="181dp"
+        android:layout_marginBottom="-121dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
