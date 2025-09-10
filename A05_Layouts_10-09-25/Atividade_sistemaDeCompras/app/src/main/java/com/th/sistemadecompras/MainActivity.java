@@ -50,9 +50,11 @@ public class MainActivity extends AppCompatActivity {
                 if (chkfeijao.isChecked()){
                     total += 8.60;
                 }
+                // String totalFormatado = String.format("%2.f", total); Verificar formatação
+
                 AlertDialog.Builder dialogo = new AlertDialog.Builder(MainActivity.this);
                 dialogo.setTitle("Aviso");
-                dialogo.setMessage("Valor total da compra: R$"+ String.valueOf(total));
+                dialogo.setMessage("Valor total da compra: R$"+ total);
                 dialogo.setNeutralButton("Ok", null);
                 dialogo.show();
             }
