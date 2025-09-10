@@ -6,4 +6,5 @@
     <string name="chkleite">Leite: R$5.49</string>
     <string name="chkcarne">Carne: R$23.90</string>
     <string name="chkfeiajo">Feijão R$ 8.60</string>
+    <string name="textview2">Teste de encaminhamento de tela</string>
 </resources>

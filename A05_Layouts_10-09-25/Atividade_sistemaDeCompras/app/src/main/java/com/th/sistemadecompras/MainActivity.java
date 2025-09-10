@@ -1,5 +1,6 @@
 package com.th.sistemadecompras;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     CheckBox chkarroz, chkleite, chkfeijao, chkcarne;
     Button bttotal;
+    Intent iTela2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +59,9 @@ public class MainActivity extends AppCompatActivity {
                 dialogo.setMessage("Valor total da compra: R$"+ total);
                 dialogo.setNeutralButton("Ok", null);
                 dialogo.show();
+
+                iTela2 = new Intent(MainActivity.this, tela2.class);
+                startActivity(iTela2);
             }
         });
 
