@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Sistema de Compras</string>
+    <string name="textview">Escolha o seu produto</string>
+    <string name="chkarroz">Arroz (R$12,89)</string>
+    <string name="bttotal">Total das compras</string>
+    <string name="chkleite">Leite: R$5.49</string>
+    <string name="chkcarne">Carne: R$23.90</string>
+    <string name="chkfeiajo">Feijão R$ 8.60</string>
+</resources>
