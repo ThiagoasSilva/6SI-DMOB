@@ -1,6 +1,7 @@
 package com.th.sistemadeavaliacao;
 
-import android.media.Rating;
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -16,15 +17,17 @@ public class MainActivity extends AppCompatActivity {
 
     TextView txtstatus;
     RatingBar rtbvotacao;
+    Intent telaresultado;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        rtbvotacao = (RatingBar) findViewById(R.id.ratingBar);
-        txtstatus = (TextView) findViewById(R.id.textView2);
+        rtbvotacao = findViewById(R.id.ratingBar);
+        txtstatus = findViewById(R.id.textView2);
 
         txtstatus.setText("Status: Ruim");
         rtbvotacao.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
@@ -44,8 +47,13 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog.Builder alerta = new AlertDialog.Builder(MainActivity.this);
             alerta.setTitle("Avaliação:");
             alerta.setMessage(txtstatus.getText());
+            //alerta.setView(ratingBar);
             alerta.setNeutralButton("Ok", null);
             alerta.show();
+
+            telaresultado = new Intent(MainActivity.this, MainActivity_avaliacao.class);
+            startActivity(telaresultado);
+
             }
         });
 

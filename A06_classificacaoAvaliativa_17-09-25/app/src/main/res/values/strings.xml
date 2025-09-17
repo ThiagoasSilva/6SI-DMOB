@@ -4,4 +4,7 @@
     <string name="deixe_seu_voto">Deixe seu voto:</string>
     <string name="status">Status:</string>
     <string name="imagemJogo">TODO</string>
+    <string name="resultado_da_avalia_o">Resultado da avaliação:</string>
+    <string name="textview">Ressultado da avaliação:\n</string>
+    <string name="imgJogo">imgJogo</string>
 </resources>
