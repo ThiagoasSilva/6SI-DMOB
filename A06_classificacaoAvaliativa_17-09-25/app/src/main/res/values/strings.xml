@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Sistema de avaliacao</string>
+    <string name="avalie_o_jogo_abaixo">Avalie o jogo abaixo:</string>
+    <string name="deixe_seu_voto">Deixe seu voto:</string>
+    <string name="status">Status:</string>
+    <string name="imagemJogo">TODO</string>
 </resources>
