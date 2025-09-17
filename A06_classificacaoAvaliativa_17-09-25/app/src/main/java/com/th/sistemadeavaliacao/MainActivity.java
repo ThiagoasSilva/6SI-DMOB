@@ -15,6 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
+    String resultado;
     TextView txtstatus;
     RatingBar rtbvotacao;
     Intent telaresultado;
@@ -33,27 +34,35 @@ public class MainActivity extends AppCompatActivity {
         rtbvotacao.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float v /* OU rating */, boolean b /*OU fromUser*/) {
-                if (v == 1){
+                if (v <= 1){
                     txtstatus.setText("Status: Regular");
-                } else if (v == 2){
+                    resultado = "Regular";
+                } else if (v <= 2){
                     txtstatus.setText("Status: Bom");
-                } else if (v == 3) {
+                    resultado = "Bom";
+                } else if (v <= 3) {
                     txtstatus.setText("Status: Ótimo");
-                } else if (v == 4) {
+                    resultado = "Ótimo";
+                } else if (v <= 4) {
                     txtstatus.setText("Status: Excelente");
-                } else if (v == 5){
+                    resultado = "Excelente";
+                } else if (v <= 5){
                     txtstatus.setText("Status: Espetacular");
+                    resultado = "Espetacular";
                 }
             AlertDialog.Builder alerta = new AlertDialog.Builder(MainActivity.this);
             alerta.setTitle("Avaliação:");
             alerta.setMessage(txtstatus.getText());
-            //alerta.setView(ratingBar);
             alerta.setNeutralButton("Ok", null);
             alerta.show();
 
+            /* TENTATIVA DE CHAMAR NA SEGUNDA TELA PORÉM O RESULTADO DA AVALIAÇÃO
+            FICA NULO, POR ISSO MANTI O RESULTADO NA CAIXA DE DIÁLOGO | COMENTAR
+            LINHA 62 PARA VERIFICAR A SEGUNDA TELA
+
             telaresultado = new Intent(MainActivity.this, MainActivity_avaliacao.class);
             startActivity(telaresultado);
-
+  //          */
             }
         });
 
