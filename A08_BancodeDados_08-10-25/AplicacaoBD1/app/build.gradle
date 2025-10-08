@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace 'com.th.aplicacaobd'
-    compileSdk 34
+    compileSdk 35
 
     defaultConfig {
         applicationId "com.th.aplicacaobd"
@@ -15,7 +15,12 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
+    buildscript {
+        dependencies {
+            classpath 'com.android.tools.build:gradle:8.9.1'
+        }
+    }
+    
     buildTypes {
         release {
             minifyEnabled false
