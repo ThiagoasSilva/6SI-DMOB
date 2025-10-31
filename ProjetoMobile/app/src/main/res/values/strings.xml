@@ -2,4 +2,8 @@
     <string name="app_name">ProjetoAntonius</string>
     <string name="teste_de_edi_o">Teste de edição</string>
     <string name="button">Teste de botão\n</string>
+    <string name="todo">TODO</string>
+    <string name="todo2">TODO</string>
+    <string name="todo3">TODO</string>
+    <string name="txt01">Teste de Mensagem</string>
 </resources>
