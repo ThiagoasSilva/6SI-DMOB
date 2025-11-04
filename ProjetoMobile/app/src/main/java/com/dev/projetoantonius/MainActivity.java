@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try{
-                    db = openOrCreateDatabase("banco_dados",
+                    db = openOrCreateDatabase("banco_dados",ee  
                             Context.MODE_PRIVATE, null);
                     db.execSQL("create table if not exists "+
                             " usuarios(numreg integer primary key "+
@@ -44,12 +44,6 @@ public class MainActivity extends AppCompatActivity {
                 } catch (Exception e) {
                 }
             }
-        });
-
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
         });
     }
 }
