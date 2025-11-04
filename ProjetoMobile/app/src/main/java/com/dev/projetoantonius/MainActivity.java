@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try{
-                    db = openOrCreateDatabase("banco_dados",ee  
+                    db = openOrCreateDatabase("banco_dados",
                             Context.MODE_PRIVATE, null);
                     db.execSQL("create table if not exists "+
                             " usuarios(numreg integer primary key "+
