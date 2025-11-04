@@ -1,6 +1,7 @@
 package com.dev.projetoantonius;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +17,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
     Button btcriarbanco;
+    Button btcadastrados;
     SQLiteDatabase db;
 
     @Override
@@ -25,6 +27,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         btcriarbanco = findViewById(R.id.btcriarbanco);
+        btcadastrados = findViewById(R.id.btcadastrardados);
+
+        btcadastrados.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               Intent gravaRegistroActivity = new Intent(MainActivity.this,
+                       GravaRegistrosActivity.class);
+                       MainActivity.this.startActivity(gravaRegistroActivity);
+            }
+        });
+
         btcriarbanco.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
