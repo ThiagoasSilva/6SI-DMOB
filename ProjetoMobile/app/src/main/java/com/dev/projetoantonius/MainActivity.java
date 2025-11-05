@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button btcriarbanco;
     Button btcadastrados;
+    Button btcadastrados2;
     SQLiteDatabase db;
 
     @Override
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
         btcriarbanco = findViewById(R.id.btcriarbanco);
         btcadastrados = findViewById(R.id.btcadastrardados);
+        btcadastrados2 = findViewById(R.id.btcadastrardados2);
 
         btcadastrados.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,6 +37,15 @@ public class MainActivity extends AppCompatActivity {
                Intent gravaRegistroActivity = new Intent(MainActivity.this,
                        GravaRegistrosActivity.class);
                        MainActivity.this.startActivity(gravaRegistroActivity);
+            }
+        });
+
+        btcadastrados2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gravaRegistroActivity2 = new Intent(MainActivity.this,
+                        GravaRegistrosActivity.class);
+                MainActivity.this.startActivity(gravaRegistroActivity2);
             }
         });
 
