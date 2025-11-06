@@ -10,9 +10,6 @@ import android.widget.Button;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     Button btcadastrados2;
     Button btconsultardados;
     SQLiteDatabase db;
+
+    GravaRegistrosActivity gra = new GravaRegistrosActivity();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         btcriarbanco = findViewById(R.id.btcriarbanco);
         btcadastrados = findViewById(R.id.btcadastrardados);
         btcadastrados2 = findViewById(R.id.btcadastrardados2);
+        btconsultardados = findViewById(R.id.btconsultardados);
 
         //CADASTRO
         btcadastrados.setOnClickListener(new View.OnClickListener() {
@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
                             .setNeutralButton("OK",  null)
                             .show();
                 } catch (Exception e) {
+                    gra.MostrarMensagem("Erro : "+ e);
                 }
             }
         });

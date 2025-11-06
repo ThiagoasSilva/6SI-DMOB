@@ -15,4 +15,9 @@
     <string name="digite_seu_email">Digite seu email</string>
     <string name="cadastrar_dados">Cadastrar Dados</string>
     <string name="cadastrar_dados2">Cadastrar Dados (2ª Edição)</string>
+    <string name="consultar_dados">Consulta de dados</string>
+    <string name="nomeConsulta">nome</string>
+    <string name="telefoneConsulta">telefone</string>
+    <string name="emailConsulta">email</string>
+    <string name="status">status</string>
 </resources>
