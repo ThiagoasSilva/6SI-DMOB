@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     Button btcriarbanco;
     Button btcadastrados;
     Button btcadastrados2;
+    Button btconsultardados;
     SQLiteDatabase db;
 
     @Override
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         btcadastrados = findViewById(R.id.btcadastrardados);
         btcadastrados2 = findViewById(R.id.btcadastrardados2);
 
+        //CADASTRO
         btcadastrados.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //CADASTRO2
         btcadastrados2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,6 +52,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //CONSULTA DE DADOS
+        btconsultardados.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent consultaDadosActivity = new Intent(MainActivity.this,
+                        ConsultaDadosActivity.class);
+                MainActivity.this.startActivity(consultaDadosActivity);
+            }
+        });
+
+        //CRIAÇÃO DE DATABASE
         btcriarbanco.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
