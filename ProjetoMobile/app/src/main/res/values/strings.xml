@@ -1,5 +1,5 @@
 <resources>
-<<<<<<< Updated upstream
+
     <string name="app_name">ProjetoAntonius</string>
     <string name="teste_de_edi_o">Teste de edição</string>
     <string name="button">Teste de botão\n</string>
@@ -7,39 +7,38 @@
     <string name="todo2">TODO</string>
     <string name="todo3">TODO</string>
     <string name="txt01">Teste de Mensagem</string>
-</resources>
-=======
-    <string name="app_name">Antonius</string>
+    <string name="alterar_dados">Alterar dados</string>
+    <string name="nome">Placa</string>
+    <string name="digite_seu_nome">Marca</string>
+    <string name="telefone">Marca</string>
+    <string name="placa">Placa</string>
+    <string name="digite_a_placa">Digite a placa</string>
+    <string name="marca">Marca</string>
+    <string name="digite_a_marca">Digite a marca</string>
+    <string name="modelo">Modelo</string>
+    <string name="digite_o_modelo">Digite o modelo</string>
+    <string name="ano">Ano</string>
+    <string name="digite_o_ano">Digite o ano</string>
 
+
+    <!-- <string name="app_name">Antonius</string>-->
     <string name="trabalhando_com_banco_de_dados_no_android">Trabalhando com Banco de Dados no Android</string>
     <string name="escolha_uma_das_op_es_abaixo">Escolha uma das opções abaixo:</string>
     <string name="criar_banco_de_dados">Criar Banco de Dados</string>
-    <string name="todo">TODO</string>
+    <!-- <string name="todo">TODO</string> -->
     <string name="cadastrar">Cadastrar</string>
-
-    <string name="e_mail">E-Mail:</string>
     <string name="cadastro_de_usu_rio">Cadastro de carros</string>
 
-    <string name="telefone">Telefone:</string>
-    <string name="nome">Nome:</string>
 
     <string name="esta_aplica_o_ir_registrar_as_informa_es_do_usu_rio_no_banco_de_dados">Insira as informações do veículo:</string>
-
-    <string name="digite_seu_nome">Digite seu nome</string>
-    <string name="digite_seu_telefone">Digite seu telefone</string>
-    <string name="digite_seu_email">Digite seu email</string>
 
     <string name="cadastrar_dados">Cadastrar Dados</string>
     <string name="cadastrar_dados2">Cadastrar Dados (2ª Edição)</string>
     <string name="consultar_dados">Consulta de dados</string>
 
-    <string name="nomeConsulta">nome</string>
-    <string name="telefoneConsulta">telefone</string>
-    <string name="emailConsulta">email</string>
-
     <string name="status">status</string>
     <string name="Antonius">Antonius</string>
-    <string name="modelo">Modelo</string>
+   <!-- <string name="modelo">Modelo</string>
     <string name="marca">Marca</string>
     <string name="ano">Ano</string>
     <string name="digite_a_marca">Digite a marca do veiculo</string>
@@ -47,9 +46,8 @@
     <string name="digite_o_ano">Digite o ano do veiculo</string>
     <string name="placa">Placa</string>
     <string name="digite_a_placa">Digite a placa</string>
-    <string name="Placa">Placa</string>
+    <string name="Placa">Placa</string> -->
     <string name="placaConsulta">placa</string>
     <string name="modeloConsulta">modelo</string>
     <string name="anoConsulta">ano</string>
 </resources>
->>>>>>> Stashed changes
