@@ -76,7 +76,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="5dp"
-        android:text="@string/telefoneConsulta"
+        android:text="@string/marca"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="#2a58b4"
         android:textSize="18sp" />

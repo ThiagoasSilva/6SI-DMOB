@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="botao_primeiro">img1</drawable>
+    <drawable name="botao_anterior">img2</drawable>
+    <drawable name="botao_proximo">img3</drawable>
+    <drawable name="botao_ultimo">img4</drawable>
+</resources>
