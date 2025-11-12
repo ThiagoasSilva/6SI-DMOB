@@ -58,7 +58,8 @@
         android:ems="10"
         android:hint="@string/digite_a_placa"
         android:importantForAutofill="no"
-        android:inputType="text" />
+        android:inputType="text"
+        android:minHeight="48dp" />
 
     <TextView
         android:id="@+id/textView4"
@@ -76,7 +77,8 @@
         android:ems="10"
         android:hint="@string/digite_a_marca"
         android:importantForAutofill="no"
-        android:inputType="text">
+        android:inputType="text"
+        android:minHeight="48dp">
 
         <requestFocus />
     </EditText>
@@ -97,7 +99,8 @@
         android:ems="10"
         android:hint="@string/digite_o_modelo"
         android:importantForAutofill="no"
-        android:inputType="text" />
+        android:inputType="text"
+        android:minHeight="48dp" />
 
     <TextView
         android:id="@+id/textView6"
@@ -115,7 +118,8 @@
         android:ems="10"
         android:hint="@string/digite_o_ano"
         android:importantForAutofill="no"
-        android:inputType="text" />
+        android:inputType="text"
+        android:minHeight="48dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
