@@ -46,7 +46,7 @@ public class ConsultaDadosActivity extends AppCompatActivity {
         imgultimo = findViewById(R.id.imgultimo);
 
         try {
-            db = openOrCreateDatabase("antonius_db", Context.MODE_PRIVATE, null);
+            db = openOrCreateDatabase("antonius_bd", Context.MODE_PRIVATE, null);
 
             c = db.query("carros", new String[]{
                     "placa", "marca", "modelo", "ano"
