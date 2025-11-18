@@ -28,7 +28,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".GravaRegistrosActivity" />
-        <activity android:name="ConsultaDadosActivity" />
+        <activity android:name=".ConsultaDadosActivity" />
     </application>
 
 </manifest>

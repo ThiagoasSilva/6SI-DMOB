@@ -62,7 +62,7 @@ public class AlterarDadosActivity extends AppCompatActivity {
         btalterardados = findViewById(R.id.btalterardados);
 
         try {
-            db = openOrCreateDatabase("antonius_db", Context.MODE_PRIVATE, null);
+            db = openOrCreateDatabase("antonius_bd", Context.MODE_PRIVATE, null);
 
             c = db.query("carros", new String[]{
                     "numreg", "placa", "marca", "modelo", "ano"
